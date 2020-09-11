@@ -1,0 +1,31 @@
+.container {
+    font: small-caps bold 100% sans-serif;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 120%;
+}
+
+label {
+    font-size: 90%;
+}
+
+input {
+    font-size: 80%;
+}
+
+button {
+    font: small-caps bold 80% sans-serif;
+}
+.form-group {
+    padding-top: 5%;
+}
+
+.extras {
+    font-size: 50%;
+    padding-top: 10%;
+}
