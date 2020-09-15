@@ -1,31 +1,23 @@
-.container {
-    font: small-caps bold 150% sans-serif;
-    position: fixed;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* @media (min-width: 576px) {
+    .container {
+        background-color: red;
+    }
 }
 
-h1 {
-    font-size: 120%;
+@media (min-width: 768px) {
+    .container {
+        background-color: green;
+    }
 }
 
-label {
-    font-size: 90%;
+@media (min-width: 992px) {
+    .container {
+        background-color: orange;
+    }
 }
 
-input {
-    font-size: 80%;
-}
-
-button {
-    font: small-caps bold 80% sans-serif;
-}
-.form-group {
-    padding-top: 5%;
-}
-
-.extras {
-    font-size: 50%;
-    padding-top: 10%;
-}
+@media (min-width: 1200px) {
+    .container {
+        background-color: blue;
+    }
+} */

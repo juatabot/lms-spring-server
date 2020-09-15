@@ -1,40 +1,51 @@
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css?no=cache">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="profile.style.client.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 </head>
+
 <div class="container">
     <h1>Profile</h1>
     <div class="input-container">
         <div class="wbdv-field wbdv-username">
             <div class="field-name">Username: </div>
-            <input id="usernameFld" />
+            <input class="form-control" id="usernameFld" readonly value="Juat" />
         </div>
         <div class="wbdv-field wbdv-phone">
             <div class="field-name">Phone: </div>
-            <input id="phoneFld" />
+            <input class="form-control" id="phoneFld" />
         </div>
         <div class="wbdv-field wbdv-email">
             <div class="field-name">Email: </div>
-            <input id="emailFld" />
+            <input class="form-control" id="emailFld" />
         </div>
         <div class="wbdv-field wbdv-dob">
             <div class="field-name">Date of Birth: </div>
-            <input id="dobFld" />
+            <input class="form-control" id="dobFld" />
         </div>
         <div class="wbdv-field wbdv-role">
-            <div class="field-name">Role: </div>
-            <input id="roleFld" />
-            <select>
-                <option value="Faculty"></option>
-                <option value="Student"></option>
-                <option value="Admin"></option>
-            </select>
+            <div class="field-name">Role:</div>
+            <div><button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select:
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Faculty</a>
+                    <a class="dropdown-item" href="#">Student</a>
+                    <a class="dropdown-item" href="#">Admin</a>
+                </div>
+            </div>
         </div>
         <div class="wbdv-button wbdv-update">
-            <div class="field-name">Update: </div> <button id="updateBtn">Update</button>
-        </div>
-        <div class="wbdv-button wbdv-logout">
-            <div class="field-name">Logout: </div><button id="logoutBtn">Logout</button>
-        </div>
+        </div> <button class="btn btn-primary" id="updateBtn">Update</button>
     </div>
-    <div class="alertFld wbdv-message">
-    </div>
+    <div class="wbdv-button wbdv-logout">
+    </div><button class="btn btn-primary" id="logoutBtn">Logout</button>
+</div>
+</div>
+<div class="alertFld wbdv-message">
+</div>

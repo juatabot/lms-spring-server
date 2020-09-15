@@ -1,16 +1,8 @@
-.container {
-    font: small-caps bold 150% sans-serif;
-    position: fixed;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.field-name {
-    display: inline;
-}
-
 input {
     float: right;
     clear: both;
+}
+
+.wbdv-field {
+    margin-bottom: 7%;
 }
