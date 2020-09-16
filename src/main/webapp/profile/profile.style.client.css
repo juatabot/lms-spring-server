@@ -1,8 +1,9 @@
 input {
     float: right;
     clear: both;
+    margin-bottom: 10px;
 }
 
-.wbdv-field {
-    margin-bottom: 7%;
+.dropdown{
+    margin-bottom: 10px;
 }
