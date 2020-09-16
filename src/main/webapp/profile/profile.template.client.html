@@ -17,20 +17,21 @@
         </div>
         <div class="wbdv-field wbdv-phone">
             <div class="field-name">Phone: </div>
-            <input class="form-control" id="phoneFld" />
+            <input class="form-control" id="phoneFld">
         </div>
         <div class="wbdv-field wbdv-email">
             <div class="field-name">Email: </div>
-            <input class="form-control" id="emailFld" />
+            <input class="form-control" id="emailFld" type="email" />
         </div>
         <div class="wbdv-field wbdv-dob">
             <div class="field-name">Date of Birth: </div>
-            <input class="form-control" id="dobFld" />
+            <input class="form-control" id="dobFld" type="date" />
         </div>
         <div class="wbdv-field wbdv-role">
             <div class="field-name">Role:</div>
-            <div><button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     Select:
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -40,11 +41,11 @@
                 </div>
             </div>
         </div>
-        <div class="wbdv-button wbdv-update">
-        </div> <button class="btn btn-primary" id="updateBtn">Update</button>
     </div>
-    <div class="wbdv-button wbdv-logout">
-    </div><button class="btn btn-primary" id="logoutBtn">Logout</button>
+    <div class="wbdv-button wbdv-update">
+        <button class="btn btn-primary" id="updateBtn">Update</button>
+        <button class="btn btn-primary" id="logoutBtn">Logout</button>
+    </div>
 </div>
 </div>
 <div class="alertFld wbdv-message">

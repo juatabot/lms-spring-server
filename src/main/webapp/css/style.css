@@ -15,12 +15,6 @@ input {
     font-size: 80%;
 }
 
-.btn.btn-primary {
-    width: 50%;
-    background-color: purple;
-}
-
 .btn {
     font: small-caps bold 80% sans-serif;
-    width: 50%;
 }
