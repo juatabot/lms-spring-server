@@ -1,0 +1,20 @@
+input {
+    margin-bottom: 10px;
+}
+
+.wbdv-title {
+    display: inline-block;
+}
+
+.wbdv-owner {
+    display: inline-block;
+}
+
+.wbdv-course {
+    padding-bottom: 10px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
