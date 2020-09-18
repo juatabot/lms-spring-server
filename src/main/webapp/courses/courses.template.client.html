@@ -13,57 +13,44 @@
     <h1>Courses</h1>
 
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <a class="navbar-brand" href="#">
-            <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse"
-                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
 
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                </ul>
-            </div>
-        </a>
-
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
         <div class="wbdv-field wbdv-add-course">
-            <div class="field-name">Add course: </div>
-            <input class="form-control" id="addCourse" placeholder="How to get big 101" />
-            <div class="wbdv-button wbdv-update">
-                <button class="btn btn-primary" id="updateBtn">Add course</button>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button">Add</button>
+                </div>
+                <input type="text" class="form-control" placeholder="Course name">
             </div>
         </div>
     </nav>
 
     <div class="class-container">
-        <div class="wbdv-row wbdv-course">
-            <div class="card-header">
-                <div class="card-body">
-                    <div class="wbdv-row wbdv-title">Title</div>
-                    <div class="wbdv-row wbdv-owner">Owner</div>
-                    <div class="wbdv-row wbdv-owner">Last modified</div>
-                    <button class="btn btn-primary" id="updateBtn">Remove course</button>
-                </div>
-            </div>
-        </div>
-        <div class="wbdv-row wbdv-course">
-            <div class="card">
-                <div class="card-body">
-                    <div>
-                        <img src="test.jpg">
-                        <div class="wbdv-row wbdv-title">Course 1</div>
-                    </div>
 
+        <div class="wbdv-row wbdv-course">
+            <div class="card">
+                <div class="card-header">
+                    Course 1
+                </div>
+                <div class="card-body">
                     <div class="wbdv-row wbdv-owner">Juat Tan</div>
                     <div class="wbdv-row wbdv-owner">Last modified</div>
                     <button class="btn btn-primary" id="updateBtn">Remove course</button>
@@ -72,24 +59,10 @@
         </div>
         <div class="wbdv-row wbdv-course">
             <div class="card">
-                <div class="card-body">
-                    <div>
-                        <img src="test.jpg">
-                        <div class="wbdv-row wbdv-title">Course 2</div>
-                    </div>
-                    <div class="wbdv-row wbdv-owner">Juat Tan</div>
-                    <div class="wbdv-row wbdv-owner">Last modified</div>
-                    <button class="btn btn-primary" id="updateBtn">Remove course</button>
+                <div class="card-header">
+                    Course 2
                 </div>
-            </div>
-        </div>
-        <div class="wbdv-row wbdv-course">
-            <div class="card">
                 <div class="card-body">
-                    <div>
-                        <img src="test.jpg">
-                        <div class="wbdv-row wbdv-title">Course 3</div>
-                    </div>
                     <div class="wbdv-row wbdv-owner">Juat Tan</div>
                     <div class="wbdv-row wbdv-owner">Last modified</div>
                     <button class="btn btn-primary" id="updateBtn">Remove course</button>
@@ -97,7 +70,7 @@
             </div>
         </div>
 
-    </div>
+</div>
 </div>
 <div class="alertFld wbdv-message">
 </div>
