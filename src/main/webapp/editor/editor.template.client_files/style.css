@@ -1,0 +1,20 @@
+.container {
+    font: small-caps bold 100% sans-serif;
+    padding: 5%;
+}
+
+h1 {
+    font-size: 400%;
+}
+
+label {
+    font-size: 95%;
+}
+
+input {
+    font-size: 80%;
+}
+
+.btn {
+    font: small-caps bold 80% sans-serif;
+}
