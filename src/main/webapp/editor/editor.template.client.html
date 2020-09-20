@@ -44,8 +44,12 @@
                         </button>
                     </li>
                     <li class="list-group-item list-group-item-action wbdv-module-item-add-btn wbdv-module-item">
-                        <button class="btn btn-outline-secondary" type="button"> <i class="fas fa-plus"></i>
-                        </button>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button"> <i class="fas fa-plus"></i>
+                            </div>
+                            <input type="text" class="form-control wbdv-module-item-add-btn" placeholder="">
+                        </div>
                     </li>
                 </ul>
 
@@ -78,7 +82,7 @@
                                                     class="fas fa-plus"></i>
                                             </button>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="" aria-label=""
+                                        <input type="text" class="form-control" placeholder="Heading" aria-label=""
                                             aria-describedby="basic-addon1">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary" type="button"> <i
@@ -105,7 +109,7 @@
                                                     class="fas fa-plus"></i>
                                             </button>
                                         </div></label>
-                                        <textarea class="form-control" rows="5" id="paragraph"></textarea>
+                                        <textarea class="form-control" rows="5" id="paragraph" placeholder="Paragraph goes here."></textarea>
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary" type="button"> <i
                                                     class="fas fa-trash wbdv-module-item-delete-btn"></i>
@@ -131,7 +135,42 @@
                                                     class="fas fa-plus"></i>
                                             </button>
                                         </div>
+
+
                                         <input id="upload" type="file" class=" form-control border-0">
+
+
+                                        
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button"> <i
+                                                    class="fas fa-trash wbdv-module-item-delete-btn"></i>
+                                            </button>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <div class="btn-group-vertical"> <button class="btn" type="button">
+                                                    <i class="fas fa-sort-up"></i>
+                                                </button>
+                                                <button class="btn" type="button">
+                                                    <i class="fas fa-sort-down"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
+                                </li>
+
+                                <li class="list-group-item list-group-item-action wbdv-module-item">
+                                    <label for="paragraph">List:</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <button class="btn btn-outline-secondary" type="button"> <i
+                                                    class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <select class="form-control">
+                                            <option>List</option>
+                                        </select>
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary" type="button"> <i
                                                     class="fas fa-trash wbdv-module-item-delete-btn"></i>

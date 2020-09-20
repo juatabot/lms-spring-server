@@ -1,5 +1,7 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css?no=cache">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="register.style.client.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +13,7 @@
 <div class="container">
     <h1>Register</h1>
     <div class="input-container">
+        <a href="../index.html"><i class="fas fa-window-close"></i></a>
         <div class="wbdv-field wbdv-username">
             <div class="field-name">Username: </div>
             <input class="form-control" id="usernameFld" placeholder="Juat" />
@@ -25,8 +28,13 @@
         </div>
 
         <div class="wbdv-button">
-            <button class="btn btn-primary wbdv-field wbdvregister" id="updateBtn">Sign up</button>
-            <button class="btn btn-secondary wbdv-field wbdv-login" id="logoutBtn">Log in</button>
+            <a href="../profile/profile.template.client.html">
+                <button class="btn btn-primary wbdv-field wbdvregister" id="updateBtn">Sign up</button>
+            </a>
+            <a href="../login/login.template.client.html">
+                <button class="btn btn-secondary wbdv-field wbdv-login" id="logoutBtn">Log in</button>
+            </a>
+
         </div>
     </div>
 </div>
