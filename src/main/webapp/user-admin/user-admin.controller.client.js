@@ -22,6 +22,18 @@ let users = [
 let $template;
 let tbody;
 
+const onclickEventHandler = () => {
+    alert("heading clicked")
+}
+
+const deleteUser = (event) => {
+    const deleteBtn = event.currentTarget
+    const $deleteBtn = $(deleteBtn)
+    const $parent = $deleteBtn.closest("tr")
+    console.log($parent)
+    $parent.remove()
+}
+
 
 function renderUsers(users) {
     users.forEach(usr => {
@@ -40,7 +52,8 @@ function renderUsers(users) {
         $firstName.html(fName)
         const $lastName = $trClone.find(".wbdv-last-name")
         $lastName.html(lName)
-        // const $removeBtn = $trClone.find(".wbdv-remove")
+        const $removeBtn = $trClone.find(".wbdv-remove")
+        $removeBtn.click((event) => deleteUser(event))
 
         tbody.append($trClone)
     })
