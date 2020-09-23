@@ -34,3 +34,7 @@ option {
 optgroup {
     font-size: 90%;
 }
+
+.wbdv-hidden{
+    display: none;
+}
