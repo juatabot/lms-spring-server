@@ -3,7 +3,7 @@ input {
 }
 
 input, input::-webkit-input-placeholder {
-    font-size: 70%;
+    font-size: 75%;
 }
 
 option {
@@ -31,9 +31,9 @@ option {
     font-size: 80%;
 }
 
-optgroup {
-    font-size: 90%;
-}
+/* optgroup {
+    font-size: 75%;
+} */
 
 .wbdv-hidden{
     display: none;
