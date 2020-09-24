@@ -50,12 +50,11 @@ function editForm(event) {
     const $selectForm = $inputForm.find("#roleFld");
 
     const $selected = $selectForm.find(role);
-    console.log($selected);
     $inputForm.find("#roleFld")
         .find('role')
         .remove()
         .end()
-        .append('<option selected value="role"></option>'.replace("role", role))
+        // .append('<option selected value="role"></option>'.replace("role", role))
         .val(role);
 }
 
