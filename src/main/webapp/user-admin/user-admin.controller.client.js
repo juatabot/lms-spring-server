@@ -1,24 +1,4 @@
-let users = [
-    {
-        username: "juat",
-        fName: "juat",
-        lName: "tan",
-        role: "STUDENT"
-    },
-    {
-        username: "lwheels",
-        fName: "larry",
-        lName: "wheels",
-        role: "STUDENT"
-    },
-    {
-        username: "stupid",
-        fName: "your",
-        lName: "mom",
-        role: "FACULTY"
-    }
-];
-
+let users;
 let $template;
 let tbody;
 
@@ -27,6 +7,18 @@ function deleteUser(event) {
     const deleteBtn = event.currentTarget;
     const $deleteBtn = $(deleteBtn);
     const $tr = $deleteBtn.closest("tr");
+
+    const username = $tr.find(".wbdv-username").html();
+    const trIndex = $tr.index();
+    console.log(users.length);
+    const userId = users[trIndex]["_id"];
+    users.splice(trIndex, 1);
+    console.log(users.length);
+
+    userService.deleteUser(userId)
+        .then(resp => {
+            console.log(resp);
+        })
     $tr.remove();
 }
 
@@ -48,6 +40,20 @@ function createUser(event) {
             users.push(svrUser);
             renderUsers(users);
         })
+}
+
+function updateUser(event) {
+    const newUsername = $("#usernameFld").val();
+    const newFirstName = $("#firstNameFld").val();
+    const newLastName = $("#lastNameFld").val();
+    const newRole = $("#roleFld").val();
+
+    const newFields = {
+        "username": newUsername,
+        "firstName": newFirstName,
+        "lastName": newLastName,
+        "role": newRole
+    }
 }
 
 function editForm(event) {
@@ -114,9 +120,14 @@ function init() {
     tbody = $("tbody.wbdv-tbody");
 
     $(".wbdv-create").click((event) => createUser(event));
-    $(".wbdv-update").click((event) => createUser(event));
+    $(".wbdv-update").click((event) => updateUser(event));
 
-    renderUsers(users);
+
+    userService.findAllUsers()
+        .then(allUsers => {
+            users = allUsers;
+            renderUsers(users);
+        })
 }
 
 $(init)

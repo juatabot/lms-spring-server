@@ -4,9 +4,9 @@ const userService = {
     findAllUsers: () =>
         fetch(url)
             .then(response => response.json()),
-            
+
     deleteUser: (userId) =>
-        fetch(url + "/" + userId, {
+        fetch(`${url}/${userId}`, {
             method: "DELETE"
         })
             .then(response => response.json()),
