@@ -10,16 +10,12 @@ function deleteUser(event) {
 
     const username = $tr.find(".wbdv-username").html();
     const trIndex = $tr.index();
-    console.log(users.length);
     const userId = users[trIndex]["_id"];
-    users.splice(trIndex, 1);
-    console.log(users.length);
-
     userService.deleteUser(userId)
         .then(resp => {
-            console.log(resp);
+            users.splice(trIndex, 1);
+            $tr.remove();
         })
-    $tr.remove();
 }
 
 function createUser(event) {
