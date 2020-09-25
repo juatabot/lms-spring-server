@@ -30,6 +30,26 @@ function deleteUser(event) {
     $tr.remove();
 }
 
+function createUser(event) {
+    // create new user from fields
+    const username = $("#usernameFld").val();
+    const firstName = $("#firstNameFld").val();
+    const lastName = $("#lastNameFld").val();
+    const role = $("#roleFld").val();
+    const newUser = {
+        username,
+        firstName,
+        lastName,
+        role
+    };
+
+    userService.createUser(newUser)
+        .then(svrUser => {
+            users.push(svrUser);
+            renderUsers(users);
+        })
+}
+
 function editForm(event) {
     // populate edit form with table row data
     const editBtn = event.currentTarget;
@@ -54,13 +74,15 @@ function editForm(event) {
         .find('role')
         .remove()
         .end()
-        // .append('<option selected value="role"></option>'.replace("role", role))
         .val(role);
 }
 
 function renderUsers(users) {
-    users.forEach(usr => {
-        const user = usr;
+    tbody.empty();
+    // render users in user dict
+    const keys = Object.keys(users);
+    keys.forEach(key => {
+        const usr = users[key];
         const username = usr.username;
         const fName = usr.fName;
         const lName = usr.lName;
@@ -76,7 +98,6 @@ function renderUsers(users) {
         const $lastName = $trClone.find(".wbdv-last-name");
         $lastName.html(lName);
         const $role = $trClone.find(".wbdv-role");
-        console.log($role);
         $role.html(role);
 
         const $removeBtn = $trClone.find(".wbdv-remove");
@@ -91,6 +112,10 @@ function renderUsers(users) {
 function init() {
     $template = jQuery(".wbdv-template");
     tbody = $("tbody.wbdv-tbody");
+
+    $(".wbdv-create").click((event) => createUser(event));
+    $(".wbdv-update").click((event) => createUser(event));
+
     renderUsers(users);
 }
 
