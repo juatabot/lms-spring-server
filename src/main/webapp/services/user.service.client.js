@@ -5,6 +5,10 @@ const userService = {
         fetch(url)
             .then(response => response.json()),
 
+    findUserById: (userId) =>
+        fetch(`${url}/${userId}`)
+            .then(response => response.json()),
+
     deleteUser: (userId) =>
         fetch(`${url}/${userId}`, {
             method: "DELETE"
