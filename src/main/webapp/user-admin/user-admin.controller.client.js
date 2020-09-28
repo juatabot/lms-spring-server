@@ -31,11 +31,19 @@ function createUser(event) {
         role
     };
 
+    console.log(newUser);
+
     userService.createUser(newUser)
         .then(svrUser => {
             users.push(svrUser);
+            console.log(svrUser);
             renderUsers(users);
-        })
+        });
+
+    $("#usernameFld").val("");
+    $("#firstNameFld").val("");
+    $("#lastNameFld").val("");
+    $("#roleFld").val("");
 }
 
 function updateUser(event) {
@@ -49,7 +57,24 @@ function updateUser(event) {
         "firstName": newFirstName,
         "lastName": newLastName,
         "role": newRole
-    }
+    };
+
+    $("#usernameFld").val("");
+    $("#firstNameFld").val("");
+    $("#lastNameFld").val("");
+    $("#roleFld").val("");
+
+    const uuid = event.currentTarget.getAttribute("uuid");
+    userService.updateUser(uuid, newFields)
+        .then(resp => {
+            userService.findAllUsers()
+                .then(allUsers => {
+                    users = allUsers;
+                    renderUsers(users);
+                })
+        });
+
+
 }
 
 function editForm(event) {
@@ -77,6 +102,12 @@ function editForm(event) {
         .remove()
         .end()
         .val(role);
+
+    const trIndex = $tr.index();
+    const userId = users[trIndex]["_id"];
+
+    // set attr uuid to userId to update
+    $(".wbdv-update").attr("uuid", userId);
 }
 
 function renderUsers(users) {
@@ -86,8 +117,8 @@ function renderUsers(users) {
     keys.forEach(key => {
         const usr = users[key];
         const username = usr.username;
-        const fName = usr.fName;
-        const lName = usr.lName;
+        const fName = usr.firstName;
+        const lName = usr.lastName;
         const role = usr.role;
 
         const $trClone = $template.clone();
