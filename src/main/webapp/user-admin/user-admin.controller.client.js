@@ -47,33 +47,39 @@ function createUser(event) {
 }
 
 function updateUser(event) {
-    const newUsername = $("#usernameFld").val();
-    const newFirstName = $("#firstNameFld").val();
-    const newLastName = $("#lastNameFld").val();
-    const newRole = $("#roleFld").val();
+    if (!event.currentTarget.getAttribute("uuid")) {
+        alert("Select a user to update first.");
+    }
+    else {
+        const newUsername = $("#usernameFld").val();
+        const newFirstName = $("#firstNameFld").val();
+        const newLastName = $("#lastNameFld").val();
+        const newRole = $("#roleFld").val();
 
-    const newFields = {
-        "username": newUsername,
-        "firstName": newFirstName,
-        "lastName": newLastName,
-        "role": newRole
-    };
+        const newFields = {
+            "username": newUsername,
+            "firstName": newFirstName,
+            "lastName": newLastName,
+            "role": newRole
+        };
 
-    $("#usernameFld").val("");
-    $("#firstNameFld").val("");
-    $("#lastNameFld").val("");
-    $("#roleFld").val("");
+        $("#usernameFld").val("");
+        $("passwordFld").val("");
+        $("#firstNameFld").val("");
+        $("#lastNameFld").val("");
+        $("#roleFld").val("");
 
-    const uuid = event.currentTarget.getAttribute("uuid");
-    userService.updateUser(uuid, newFields)
-        .then(resp => {
-            userService.findAllUsers()
-                .then(allUsers => {
-                    users = allUsers;
-                    renderUsers(users);
-                })
-        });
-
+        const uuid = event.currentTarget.getAttribute("uuid");
+        userService.updateUser(uuid, newFields)
+            .then(resp => {
+                userService.findAllUsers()
+                    .then(allUsers => {
+                        users = allUsers;
+                        renderUsers(users);
+                        $(".wbdv-update").attr("uuid", "");
+                    })
+            });
+    }
 
 }
 
@@ -148,7 +154,6 @@ function init() {
 
     $(".wbdv-create").click((event) => createUser(event));
     $(".wbdv-update").click((event) => updateUser(event));
-
 
     userService.findAllUsers()
         .then(allUsers => {
